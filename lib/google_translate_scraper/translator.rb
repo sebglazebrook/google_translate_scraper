@@ -37,7 +37,7 @@ require 'nokogiri'
       translation = get_dictionary_translation(html_doc)
       # check for non-dictionary translations
       if translation.empty?
-        translation[0] = get_non_dictionary_translation(html_doc).text
+        translation[0] = get_non_dictionary_translation(html_doc)
       end
       return translation
       
