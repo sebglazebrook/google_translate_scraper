@@ -15,5 +15,4 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = GoogleTranslateScraper::VERSION
   gem.add_dependency "nokogiri"
-  gem.add_dependency "net/http"
 end
