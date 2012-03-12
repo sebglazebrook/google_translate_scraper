@@ -37,7 +37,7 @@ require 'nokogiri'
       translation = get_dictionary_translation(html_doc)
       # check for non-dictionary translations
       if translation.empty?
-        translation[0] = get_non_dictionary_translation(html_doc)
+        translation[0] = get_non_dictionary_translation(html_doc).text
       end
       return translation
       
@@ -55,7 +55,7 @@ require 'nokogiri'
   
     # when there is a phrase with no dictionary translation i.e multiple possible translations
     def get_non_dictionary_translation html_doc
-      translation = html_doc.xpath('//html/body/div[2]/div/form/div[2]/div[2]/div/div/div[3]/div/div/span/span')
+      translation = html_doc.xpath('//html/body/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/div/div[2]/span/span')                                  
     end
     
   end
