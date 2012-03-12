@@ -4,9 +4,9 @@ require 'nokogiri'
     
   class Translator
     
-    @@input_language
-    @@target_language
-    @@text
+    @@input_language = nil
+    @@target_language = nil
+    @@text = nil
     
     def translate(input_language, target_language, text )
       @@input_language = input_language
@@ -44,7 +44,7 @@ require 'nokogiri'
     end  
     
     # when there are multiple translations
-    def self.get_dictionary_translation html_doc
+    def get_dictionary_translation html_doc
       translations = Array.new
       translation = html_doc.xpath('//div[@id="gt-res-dict"]/ol/li/div/div')
       translation.each do |t|
@@ -54,7 +54,7 @@ require 'nokogiri'
     end
   
     # when there is a phrase with no dictionary translation i.e multiple possible translations
-    def self.get_non_dictionary_translation html_doc
+    def get_non_dictionary_translation html_doc
       translation = html_doc.xpath('//html/body/div[2]/div/form/div[2]/div[2]/div/div/div[3]/div/div/span/span')
     end
     
