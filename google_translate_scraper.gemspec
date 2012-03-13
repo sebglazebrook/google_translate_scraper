@@ -4,7 +4,7 @@ require File.expand_path('../lib/google_translate_scraper/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Seb Glazebrook"]
   gem.email         = ["me@sebglazebrook.com"]
-  gem.description   = %q{" add details description of gem here."}
+  gem.description   = %q{"This gem scraps GoogleTranslate and returns the translation for the given search phrase. If multiple translations are available, multiple are returned."}
   gem.summary       = %q{"This gem scrapes Google Translate and their results."}
   gem.homepage      = ""
 
