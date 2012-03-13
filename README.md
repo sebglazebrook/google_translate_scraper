@@ -1,6 +1,8 @@
 # GoogleTranslateScraper
 
-TODO: Write a gem description
+This gem scraps GoogleTranslate and returns the translation for the given search phrase.
+
+If multiple translations are available, multiple are returned.
 
 ## Installation
 
@@ -18,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1- require 'google_translate_scraper'
+
+2- translator = GoogleTranslateScraper::Translator.new
+
+3- translations = translations = translator.translate( source_language  = "en", target_language = "sv", search_phrase = "sup fool" ) 
+
+NOTE: source and target language values must be a string containg the ISO 639-1 letter code for that language. For a list see here: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 ## Contributing
 
