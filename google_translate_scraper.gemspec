@@ -15,4 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = GoogleTranslateScraper::VERSION
   gem.add_dependency "nokogiri"
+  gem.add_development_dependency 'rspec', '~> 2.10.0'
 end
