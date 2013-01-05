@@ -24,7 +24,7 @@ Or install it yourself as:
 
 2- translator = GoogleTranslateScraper::Translator.new
 
-3- translations = translations = translator.translate( source_language  = "en", target_language = "sv", search_phrase = "sup fool" ) 
+3- translations = translator.translate( source_language  = "en", target_language = "sv", search_phrase = "sup fool" ) 
 
 NOTE: source and target language values must be a string containg the ISO 639-1 letter code for that language. For a list see here: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
