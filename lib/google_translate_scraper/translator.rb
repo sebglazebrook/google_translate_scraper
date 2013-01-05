@@ -46,7 +46,7 @@ require 'nokogiri'
     # when there are multiple translations
     def get_dictionary_translation html_doc
       translations = Array.new
-      translation = html_doc.xpath('//div[@id="gt-res-dict"]/ol/li/div/div')
+      translation = html_doc.xpath("//span[@id='result_box']")
       translation.each do |t|
         translations.push t.text
       end
