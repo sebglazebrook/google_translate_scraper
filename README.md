@@ -12,7 +12,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -22,11 +22,11 @@ Or install it yourself as:
 
 1- require 'google_translate_scraper'
 
-2- translator = GoogleTranslateScraper::Translator.new
+2- response = GoogleTranslateScraper.translate(:source_language => 'en', :target_language => 'sv', :search_text => 'hey')
 
-3- translations = translator.translate( source_language  = "en", target_language = "sv", search_phrase = "sup fool" ) 
+3- response.translations.first
 
-NOTE: source and target language values must be a string containg the ISO 639-1 letter code for that language. For a list see here: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+NOTE: source and target language values must be a string containg the ISO 639-1 two letter code for that language. For a list see here: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 ## Contributing
 
